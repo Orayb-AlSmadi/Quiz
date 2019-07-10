@@ -5,21 +5,21 @@ that takes two parameters an age and years of experince
 
 1- if your age grater than or equal to 25 and less than 30
 and the exp grater than or equal to 5
-return "you are awesome"
+return "you are awesome" age >=25 && age < 30 && Exp >=5 
 
 2- if your age grater than or equal to 30
 and the exp grater than or equal to 5
-return "you are goood"
+return "you are goood" age >=30 && Exp >=5 
 
 3- if your age grater than or equal to 25
 and the exp less than 5 and grater than 2
-return "dont worry you need to work on your self more "
+return "dont worry you need to work on your self more " age >=25 && Exp <5  && Exp >2
 
 4- if the age less than or equal to 24
-return "you still young"
+return "you still young" age <=24
 
 5- if the exp less than or equal to 2
-return "you need more exp"
+return "you need more exp" Exp <=2
 
 isMyAgeAndExpEnough(27,6)
 =>"you are awesome"
@@ -37,8 +37,29 @@ isMyAgeAndExpEnough(35,1)
 =>"you need more exp"
 */
 
+function isMyAgeAndExpEnough (age, Exp) {
+ if (age >=25 && age < 30 && Exp >=5 )
+ { return "you are awesome" ;}
 
+ if ( age >=30 && Exp >=5)
+ { return "you are goood";}
 
+if ( age >=25 && Exp <5  && Exp >2)
+{ return "dont worry you need to work on your self more ";}
+
+if( age <=24)
+{return "you still young";}
+
+if (Exp <=2)
+{return "you need more exp"; }
+
+}
+
+console.log (isMyAgeAndExpEnough(27,6))
+console.log (isMyAgeAndExpEnough(35,6))
+console.log (isMyAgeAndExpEnough(26,3))
+console.log (isMyAgeAndExpEnough(22,1))
+console.log (isMyAgeAndExpEnough(35,1))
 
 
 
@@ -62,14 +83,20 @@ countDown(2)
 
 countDown(7)
 => "7, 6, 5, 4, 3, 2, 1, done"
-
-
-
 */
 
 
+function countDown (x){
+    if (x===0)
+    return "done"
+
+    return (x+", "+countDown(x-1))
+}
 
 
+console.log(countDown(5))
+console.log(countDown(2))
+console.log(countDown(7))
 
 
 
